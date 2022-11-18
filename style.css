@@ -31,12 +31,15 @@ a{
 }
  .sec1 ul{
     display: flex;
-    
+}
+.sec ul li{
+  
 }
 .sec1 ul li a{
     color:#fff;
     font-size:20px;
     padding:20px;
+    transition: 2s ease;
 }
 .sec1 ul li a:hover{
     color:rgb(28, 212, 108);  
