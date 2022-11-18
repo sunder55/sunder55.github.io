@@ -10,6 +10,7 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
     />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   </head>
   <body>
     <div class="navbar">
@@ -54,7 +55,11 @@
         <div class="about_section_title">
           <h1 class="about_section_title1">About Me</h1>
         </div>
-        <div class="about_section_desc">
+        <div
+          class="about_section_desc"
+          data-aos="zoom-in"
+          data-aos-duration="1000"
+        >
           <p class="about_section_desc1">
             I am an adaptable college student (7th sem, BCA) currently attending
             Ratna RajyaLaxmi Campus. Throughout my academic career, I have been
@@ -69,7 +74,11 @@
           <h1 class="project_section_title1">Projects</h1>
         </div>
         <div class="project_section_desc">
-          <div class="project_section_one">
+          <div
+            class="project_section_one"
+            data-aos="fade-right"
+            data-aos-duration="1000"
+          >
             <div class="project_section_one_image">
               <img
                 class="newsportal_image"
@@ -98,7 +107,11 @@
               </div>
             </div>
           </div>
-          <div class="project_section_two">
+          <div
+            class="project_section_two"
+            data-aos="fade-left"
+            data-aos-duration="1000"
+          >
             <div class="project_section_one_image">
               <img class="hotel_image" src="hotel.jpg" alt="newsPortal" />
             </div>
@@ -131,7 +144,7 @@
           <h1 class="career_title1">My Career</h1>
         </div>
         <div class="career_desc">
-          <div class="career_desc1">
+          <div class="career_desc1" data-aos="fade-up">
             <div class="career_heading1">
               <div class="runn">Runnning</div>
               <div class="arrow"></div>
@@ -146,7 +159,7 @@
               </div>
             </div>
           </div>
-          <div class="career_desc1">
+          <div class="career_desc1" data-aos="fade-up">
             <div class="career_heading1">
               <div class="runn">2018 AD</div>
               <div class="arrow"></div>
@@ -160,7 +173,7 @@
               </div>
             </div>
           </div>
-          <div class="career_desc1">
+          <div class="career_desc1" data-aos="fade-up">
             <div class="career_heading1">
               <div class="runn">2016 AD</div>
               <div class="arrow"></div>
@@ -182,17 +195,26 @@
         <div class="contact_section_heading">
           <h1 class="contact_section_heading1">Contact Me</h1>
         </div>
-        <div class="contact_details">
-          <div class="contact_details1">
+        <div
+          class="contact_details"
+        >
+          <div class="contact_details1" data-aos="zoom-in"
+          data-aos-duration="1000">
             <div class="contact_phone">
               <div class="contact_name">Rukmagat Kandel</div>
-              <div class="contact_number">9863630778, </div>
+              <div class="contact_number">9863630778,</div>
               <div class="contact_mail">sunderkandel789@ gmail.com</div>
               <div class="contact_github">
-                <a href="https://github.com/sunder55" target="_blank"><i class="bi bi-github"></i>Connect on Github</a>
+                <a href="https://github.com/sunder55" target="_blank"
+                  ><i class="bi bi-github"></i>Connect on Github</a
+                >
               </div>
               <div class="contact_linkedin">
-                <a href="https://www.linkedin.com/in/rukmagat-kandel-75b302247/" target="_blank"><i class="bi bi-linkedin"></i>Connect on Linkedin</a>
+                <a
+                  href="https://www.linkedin.com/in/rukmagat-kandel-75b302247/"
+                  target="_blank"
+                  ><i class="bi bi-linkedin"></i>Connect on Linkedin</a
+                >
               </div>
             </div>
             <div class="contact_message">
@@ -202,20 +224,21 @@
               </div>
             </div>
           </div>
-         
-          <div class="contact_details2">
+
+          <div class="contact_details2" data-aos="zoom-in"
+          data-aos-duration="1000">
             <form method="post" action="https://formspree.io/f/mqkjnvpp">
               <div class="form_heading">Enter message below!</div>
               <div class="form_name">
                 <div class="form_name1">Name</div>
-                <div class="form_input_name" >
-                  <input type="text" name="name" required/>
+                <div class="form_input_name">
+                  <input type="text" name="name" required />
                 </div>
               </div>
               <div class="form_email">
                 <div class="form_email1">Email</div>
                 <div class="form_input_email">
-                  <input type="email" name="email" required/>
+                  <input type="email" name="email" required />
                 </div>
               </div>
               <div class="form_message">
@@ -225,10 +248,9 @@
                 </div>
               </div>
               <div class="form_submit">
-                <input type="submit" class=form_submits value="Send">
+                <input type="submit" class="form_submits" value="Send" />
               </div>
             </form>
-
           </div>
         </div>
       </div>
@@ -246,6 +268,10 @@
         // document.getElementById("cancel").style.display="none";
         document.querySelector(".sec1_menu_icon1").style.display = "none";
       }
+    </script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
     </script>
   </body>
 </html>

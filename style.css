@@ -152,6 +152,7 @@ font-size: 20px;
     /* grid-template-columns: auto auto auto; */
     gap:20px;
     flex-wrap: wrap;
+    transition: 0.3s  ;
    
 }
 .project_section_desc div{
@@ -526,14 +527,17 @@ textarea{
     }
    
   
-}
-@media(max-width:400px){
+
     .career_heading1_desc1{
         font-size: 20px;
         font-weight: bold;
     }
     .career_heading1_desc{
-        margin-left:8px;
-        
+        margin-left:15px;
+       
+    }
+    .career_desc{
+        width: fit-content;
+    
     }
 }
