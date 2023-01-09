@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    /* Add some styling for the dice and buttons */
+    .dice {
+      display: inline-block;
+      width: 50px;
+      height: 50px;
+      border: 1px solid black;
+      border-radius: 10px;
+      text-align: center;
+      line-height: 50px;
+      font-size: 20px;
+      margin: 10px;
+    }
+    button {
+      padding: 10px;
+      font-size: 18px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    /* Add some styling for the game status message */
+    .message {
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Add a message element to display the current game status -->
+  <div class="message">Player 1's turn</div>
+  <!-- Add dice elements for each player -->
+  <div id="player1-dice" class="dice">1</div>
+  <div id="player2-dice" class="dice">1</div>
+  <!-- Add buttons for each player to roll the dice -->
+  <button onclick="rollDice(1)">Roll dice</button>
+  <button onclick="rollDice(2)">Roll dice</button>
+  <script>
+    // Initialize variables for player scores and current player
+    let player1Score = 0;
+    let player2Score = 0;
+    let currentPlayer = 1;
+
+    // Function to roll the dice for a player
+    function rollDice(player) {
+      // Generate a random number between 1 and 6
+      let roll = Math.floor(Math.random() * 6) + 1;
+      // Update the dice value for the player
+      let diceElement = player === 1 ? 'player1-dice' : 'player2-dice';
+      document.getElementById(diceElement).innerHTML = roll;
+      // Update the player's score
+      if (player === 1) {
+        player1Score += roll;
+      } else {
+        player2Score += roll;
+      }
+      // Check if the player has won the game
+      if (player1Score >= 51 || player2Score >= 51) {
+        // Check if the player needs to roll again
+        if (player1Score === 49 && player === 1) {
+          player1Score += roll;
+          if (player1Score > 51) {
+            player1Score = 51 - (player1Score - 51);
+          }
+        }
+        if (player2Score === 49 && player === 2) {
+          player2Score += roll;
+          if (player2Score > 51) {
+            player2Score = 51 - (player2Score - 51);
+          }
+        }
+        // Announce the winner
+        let winner = player1Score === 51 ? 'Player 1' : 'Player 2';
+        document.querySelector('.message').innerHTML = `${winner} wins!`;
+      }
+    }
