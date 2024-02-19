@@ -125,9 +125,11 @@ html{
     
 }
 .about_section_desc {
- text-align: justify;
  margin-top: 3rem;
  font-size: 20px;
+}
+.about_section_desc p{
+    text-align: justify;
 }
 
 /* about_section_ends */
